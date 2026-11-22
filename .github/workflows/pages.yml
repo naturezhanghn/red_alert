@@ -21,7 +21,15 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p _site
-          cp index.html style.css game.js favicon.svg _site/
+          cp -R index.html c2runtime.js data.js levels.json offlineClient.js jquery-2.1.1.min.js images media icon-*.png _site/
+      - name: Validate static game bundle
+        run: |
+          test -s _site/index.html
+          test -s _site/c2runtime.js
+          test -s _site/data.js
+          test -s _site/levels.json
+          test -d _site/images
+          test -d _site/media
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
