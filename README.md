@@ -18,3 +18,5 @@ npm run serve
 ```
 
 打开 `http://localhost:4173` 即可开始游戏。
+
+线上试玩：<https://naturezhanghn.github.io/red_alert>
